@@ -7,7 +7,7 @@
 **Meta interna de carga:** 23 de noviembre, antes de las 20:00  
 **Equipo:** Juan Alexis Quispe Luque, Fernando Perez del Castillo, Yony Alex Vilca Mamani y Daniel Casas  
 **Estado inicial:** no existe código ni hay tecnología obligatoria; se usarán servicios cloud.  
-**Documento de referencia:** `C:\Users\danny\Downloads\TRABAJO FINAL CLOUD COMPUTING - Agosto 2026.pdf`.
+**Documento de referencia:** consigna y rúbrica del curso, conservadas por el equipo en su repositorio de trabajo.
 
 ## 0. Cómo debe usar este plan cualquier agente de IA
 
@@ -287,7 +287,7 @@ Daniel añadirá al informe una hoja de supuestos con estas variables: precio ne
 
 ## 13. Fuentes base para el informe
 
-- Consigna y rúbrica del curso: `C:\Users\danny\Downloads\TRABAJO FINAL CLOUD COMPUTING - Agosto 2026.pdf`.
+- Consigna y rúbrica del curso: PDF proporcionado por el docente y conservado por el equipo.
 - [Supabase: seguridad por fila](https://supabase.com/docs/guides/database/postgres/row-level-security).
 - [Supabase: precios y límites](https://supabase.com/pricing).
 - [Cloudflare: despliegue de React en Pages](https://developers.cloudflare.com/pages/framework-guides/deploy-a-react-site/).
