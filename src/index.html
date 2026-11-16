@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d1724" />
+    <meta name="description" content="Panel de coordinación del SaaS Academia Manager: tareas, cronograma, documentación y guía de Git del equipo." />
+    <title>Academia Manager · Centro de proyecto</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegación principal">
+        <a class="brand" href="#/resumen" aria-label="Academia Manager, ir a resumen">
+          <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+          <span class="brand-copy"><strong>academia<span>manager</span></strong><small>WORKSPACE / CLOUD 2026</small></span>
+        </a>
+        <div class="sidebar-label">ESPACIO DE TRABAJO</div>
+        <nav class="nav-list" id="nav-main">
+          <a href="#/resumen" data-route="resumen"><span class="nav-icon">◫</span><span>Resumen</span></a>
+          <a href="#/tablero" data-route="tablero"><span class="nav-icon">▦</span><span>Tablero</span><span class="nav-count" id="nav-task-count">16</span></a>
+          <a href="#/cronograma" data-route="cronograma"><span class="nav-icon">◷</span><span>Cronograma</span></a>
+          <a href="#/documentos" data-route="documentos"><span class="nav-icon">▤</span><span>Documentos</span></a>
+          <a href="#/git" data-route="git"><span class="nav-icon">⌘</span><span>Git y repositorios</span></a>
+          <a href="#/equipo" data-route="equipo"><span class="nav-icon">♙</span><span>Equipo</span></a>
+        </nav>
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-label">ENLACES DEL EQUIPO</div>
+        <div class="side-links">
+          <a id="side-app-repo" target="_blank" rel="noopener noreferrer"><span class="link-dot dot-cyan"></span> Repositorio del SaaS <span>↗</span></a>
+          <a id="side-panel-repo" target="_blank" rel="noopener noreferrer"><span class="link-dot dot-lime"></span> Repositorio del panel <span>↗</span></a>
+        </div>
+        <div class="sidebar-note"><span class="note-spark">✳</span><div><strong>Una sola meta</strong><p>Demostrar un flujo real de cobranza y asistencia en la nube.</p></div></div>
+        <div class="sidebar-footer">NOV 16 — 23, 2026 <span>·</span> LIMA, PERÚ</div>
+      </aside>
+
+      <div class="main-column">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="mini-mark">✳</span> academia<span>manager</span></div>
+          <div class="topbar-left"><span class="workspace-pill"><span class="workspace-dot"></span> PROYECTO ACTIVO</span><span class="topbar-separator"></span><span id="breadcrumb">Resumen</span></div>
+          <div class="topbar-right">
+            <a class="top-repo" id="top-repo" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+            <label class="profile-select-wrap" for="profile-select"><span class="profile-avatar" id="profile-avatar">EQ</span><select id="profile-select" aria-label="Seleccionar perfil local"><option value="all">Todo el equipo</option><option value="Juan">Juan Alexis</option><option value="Fernando">Fernando</option><option value="Yony">Yony Alex</option><option value="Daniel">Daniel</option></select><span class="select-chevron">⌄</span></label>
+          </div>
+        </header>
+        <main id="view" tabindex="-1"></main>
+        <footer class="app-footer"><span>Academia Manager <span class="footer-divider">/</span> Centro de proyecto</span><span>Estados personales en este navegador <span class="footer-divider">·</span> GitHub es el registro compartido</span></footer>
+      </div>
+    </div>
+    <div id="drawer-root"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
