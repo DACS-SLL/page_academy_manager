@@ -7,7 +7,11 @@
 | Aplicación SaaS | [DACS-SLL/cloud_project_academy](https://github.com/DACS-SLL/cloud_project_academy) | Código del MVP, migraciones, pruebas, documentación técnica y README del SaaS. |
 | Panel de gestión | [DACS-SLL/page_academy_manager](https://github.com/DACS-SLL/page_academy_manager) | Esta web, los archivos `docs/*.md`, tareas iniciales y guías. Vercel despliega **este** repositorio. |
 
+En el espacio de trabajo actual, la aplicación SaaS está en `D:\cloud\academy_cloud` y el panel en `D:\cloud\dashboard-academia`. Los nombres locales no tienen que coincidir con los nombres de GitHub: verifica siempre el remoto antes de publicar.
+
 **Antes de cada push:** ejecuta `git remote -v` dentro del proyecto. El remoto debe ser el de la fila correcta. El panel no se publica en el repositorio del SaaS.
+
+**Convención del equipo:** los mensajes de commit se escriben en español. Se puede conservar un prefijo técnico como `feat`, `fix` o `docs`, seguido de la tarea y una descripción en español; por ejemplo, `docs(R01): ajustar el contrato funcional`.
 
 ## Flujo de una tarea
 

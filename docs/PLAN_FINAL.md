@@ -24,7 +24,7 @@
 
 1. El producto será un SaaS web para academias preuniversitarias pequeñas, inicialmente una sede por academia.
 2. El MVP incluirá cuotas y pagos **registrados manualmente**, asistencia, alertas y seguimiento de casos. No procesará dinero ni integrará una pasarela de pago.
-3. La demostración utilizará **datos ficticios**. La experiencia previa de integrantes que estudiaron en academias servirá para dibujar el flujo; Daniel buscará entrevistar a **tres responsables actuales de academias** y observar al menos un proceso de cobranza y asistencia durante los días 1–2. La falta de entrevistas no detendrá la entrega académica, pero impedirá afirmar que el negocio está validado.
+3. La demostración utilizará **datos ficticios**. Daniel definirá el flujo inicial y lo presentará a Juan, Fernando y Yony para revisar su viabilidad técnica y aclarar contratos de trabajo. Entrevistar a responsables actuales de academias es una actividad comercial opcional, posterior a las prioridades P0; su ausencia no impide la entrega académica, pero impide afirmar que el negocio está validado.
 4. No se estimará el trabajo por horas individuales. Cada día tendrá un resultado verificable, responsables y una decisión de continuar o recortar alcance.
 5. Cada integrante participará en el informe y en la exposición; Daniel coordinará la integración documental y el control del proyecto.
 
@@ -139,7 +139,7 @@ Los agentes reciben una **ID** y el criterio de aceptación de esta tabla. P0 ti
 
 | ID / prioridad | Dueño | Entregable verificable | Depende de | Aceptación mínima |
 |---|---|---|---|---|
-| `R01` / P0 | Daniel | Flujo, historias, matriz requisito–evidencia y contrato de pantallas/datos | Ninguna | Los cuatro aprueban un mismo recorrido de demo y reglas del MVP el día 1. |
+| `R01` / P0 | Daniel | Flujo propuesto por Daniel, historias, matriz requisito–evidencia y contrato de pantallas/datos | Ninguna | Daniel presenta el recorrido y registra las observaciones técnicas del equipo; quedan definidos los contratos y criterios del MVP el día 1. |
 | `C01` / P0 | Yony | Repositorio, configuración, despliegue React y `.env.example` | `R01` | URL HTTPS abre la aplicación; ningún secreto queda en código o ZIP. |
 | `B01` / P0 | Fernando | Migraciones, Auth, `memberships`, políticas por rol y academia | `R01` | Tres cuentas de demo entran; docente no lee finanzas y academia B no lee datos de A por API. |
 | `B02` / P0 | Fernando | Ciclos, grupos, alumnos, matrícula y cuotas persistentes | `B01` | Un alumno y sus tres cuotas se ven después de recargar o entrar desde otro navegador. |
@@ -151,19 +151,19 @@ Los agentes reciben una **ID** y el criterio de aceptación de esta tabla. P0 ti
 | `F03` / P0 | Juan + Yony | Tablero, lista de casos y estados de contacto | `B05` | Cambian inmediatamente tras registrar pago, ausencia o contacto. |
 | `Q01` / P0 | Daniel | Matriz de pruebas y evidencias de ejecución | `B01`–`F03` | Pasan todas las pruebas de salida de la sección 8; defectos bloqueantes resueltos. |
 | `D01` / P0 | Daniel | Informe PDF, diapositivas, guion y ZIP reproducible | Evidencia técnica diaria y `Q01` | Cumple la matriz académica de la sección 11 y abre correctamente. |
-| `M01` / paralelo | Daniel | Tres entrevistas buscadas, comparación de competidores y estimación ascendente del segmento | `R01` | Fuentes y respuestas registradas; si no hay acceso, se declara sin inventar resultados. |
+| `M01` / opcional comercial | Daniel | Si hay tiempo: entrevistas, comparación de competidores y estimación ascendente del segmento | `R01`; sin bloquear P0 | Fuentes y respuestas registradas; si no hay acceso, se declara la falta de validación comercial sin inventar resultados. |
 | `F04` / P1 | Juan | CSV de deuda/asistencia y filtros adicionales | P0 estable al cierre del día 5 | Exportación corresponde a datos visibles y respeta rol/academia. |
 
 ### 7.2. Calendario y puertas de salida
 
 | Fecha | Juan — frontend | Fernando — backend/datos | Yony — integración/cloud | Daniel — dirección/QA/informe | Puerta de salida verificable |
 |---|---|---|---|---|---|
-| **Lun. 16** | Flujo y wireframes de matrícula, caja, docente y tablero. | Esquema, roles, reglas de saldo, ausencia y aislamiento. | Repositorio, entornos, estructura de app y despliegue vacío. | Cierra P0/P1, criterios y matriz requisito–evidencia; agenda entrevistas con responsables actuales y revisa competidores. | Flujo de demo, modelo y contratos aprobados por los cuatro. |
-| **Mar. 17** | Navegación, inicio de sesión y formularios base. | Base de datos, Auth, políticas de acceso y migraciones iniciales. | Despliegue accesible, variables de entorno seguras e integración de sesión. | Contrasta flujo en entrevistas/observación; redacta problema, objetivos y método; prepara pruebas por rol. | Tres roles pueden entrar en versión cloud; cada uno ve su menú. |
+| **Lun. 16** | Revisa el flujo de Daniel y dibuja wireframes de matrícula, caja, docente y tablero. | Revisa el flujo de Daniel; define esquema, roles, reglas de saldo, ausencia y aislamiento. | Revisa el flujo de Daniel; prepara repositorio, entornos, estructura de app y despliegue vacío. | Define y presenta el flujo; cierra P0/P1, criterios, contratos y matriz requisito–evidencia. | Flujo presentado por Daniel; observaciones técnicas resueltas y contratos registrados para los cuatro. |
+| **Mar. 17** | Navegación, inicio de sesión y formularios base. | Base de datos, Auth, políticas de acceso y migraciones iniciales. | Despliegue accesible, variables de entorno seguras e integración de sesión. | Redacta problema, objetivos y método; prepara pruebas por rol. Si no retrasa P0, busca entrevistas comerciales. | Tres roles pueden entrar en versión cloud; cada uno ve su menú. |
 | **Mié. 18** | Pantallas de ciclos, grupos, alumnos, matrícula y cuotas. | Persistencia y reglas de matrícula/cuotas. | Conecta frontend con API; prueba recarga y segundo navegador. | Prueba casos de matrícula/cuotas; documenta módulos y modelo de datos. | Alumno y cuotas se guardan y reaparecen al entrar de nuevo. |
 | **Jue. 19** | Pantallas de pago y asistencia con confirmaciones y errores claros. | Pago total/parcial, saldo, anulación auditada y consulta de deuda. | Implementa sesiones/asistencia y une flujos; corrige integración. | Prueba cálculos, duplicados, permisos; redacta arquitectura, cloud y seguridad. | Pago parcial cambia saldo; docente guarda asistencia real. |
-| **Vie. 20** | Tablero y lista de casos con estados de seguimiento. | Consultas de vencidos, ausencias y reglas de casos. | Integra el recorrido completo y publica versión candidata. | Ejecuta demo de punta a punta, registra defectos, valida métricas y propone precio para contrastarlo con entrevistados. | **MVP P0 completo en cloud** antes del cierre del día. |
-| **Sáb. 21** | Corrige fallos de uso y formularios; P1 solo si P0 ya pasó. | Corrige seguridad, saldos y consistencia. | Prepara datos ficticios, migraciones y recuperación; revisa despliegue. | Prueba dos academias, tres roles, recarga, casos y rendimiento básico; incorpora capturas/resultados reales y primera estimación ascendente del mercado al informe. | P0 pasa las pruebas; lista de defectos críticos vacía. |
+| **Vie. 20** | Tablero y lista de casos con estados de seguimiento. | Consultas de vencidos, ausencias y reglas de casos. | Integra el recorrido completo y publica versión candidata. | Ejecuta demo de punta a punta, registra defectos y valida métricas; contrasta precio solo si P0 no se retrasa. | **MVP P0 completo en cloud** antes del cierre del día. |
+| **Sáb. 21** | Corrige fallos de uso y formularios; P1 solo si P0 ya pasó. | Corrige seguridad, saldos y consistencia. | Prepara datos ficticios, migraciones y recuperación; revisa despliegue. | Prueba dos academias, tres roles, recarga, casos y rendimiento básico; incorpora capturas/resultados reales al informe. Estima mercado solo si P0 está estable. | P0 pasa las pruebas; lista de defectos críticos vacía. |
 | **Dom. 22** | Ajustes finales de legibilidad y recorrido de demo. | Revisión final de políticas y reglas. | Congela despliegue estable, prepara ZIP reproducible y respaldo de datos ficticios. | **Congela nuevas funciones al mediodía**; cierra informe, referencias, presentación y primer ensayo de 50 minutos. | PDF, ZIP y demo ensayados; solo quedan fallos bloqueantes. |
 | **Lun. 23** | Resuelve únicamente fallos que impiden la demo. | Revisa que no haya acceso indebido ni errores de saldo. | Verifica URL, credenciales de demo y paquete; conserva última versión estable. | Ensayo final, revisión de formato y carga de los dos archivos antes de las **20:00**; registra confirmación de entrega. | Entrega confirmada y demo lista, con margen hasta las 23:00. |
 
@@ -234,13 +234,15 @@ Se prepararán respuestas para hasta cinco minutos adicionales de preguntas. Las
 
 **Estado de esta matriz:** el plan cubre las actividades necesarias; el cumplimiento final se confirmará únicamente cuando existan y se revisen los artefactos indicados. No se debe presentar este plan como si fuera el informe o la aplicación terminada.
 
+**Validación con clientela real:** el PDF no fija un porcentaje ni exige entrevistas, pilotos o clientes reales para aprobar. Sí pide justificar el problema y describir la evaluación de resultados, incluidas métricas de satisfacción del usuario. Si no se mide satisfacción con usuarios externos, se informará expresamente esa limitación y no se presentarán opiniones del equipo como validación comercial.
+
 | Requisito del PDF | Evidencia de entrega | Responsable y momento de verificación |
 |---|---|---|
 | SaaS web que resuelve una necesidad específica y aplicación demostrable | URL pública, recorrido P0 con datos persistentes y capturas coherentes | Yony y Daniel, días 5–7 |
 | Usuarios, roles, funciones y paneles pertinentes | Matriz de permisos, pantallas por rol y pruebas de bloqueo | Fernando, Juan y Daniel, días 5–6 |
 | Arquitectura cloud, componentes, modelo de despliegue y escalabilidad | Diagrama frontend/API/Auth/BD, servicios elegidos, región, límites y ruta de escalado | Fernando y Yony, días 4–7 |
 | Seguridad, respaldo y recuperación | Políticas por academia, pruebas de acceso, procedimiento de exportación/restauración y limitaciones del plan gratuito | Fernando y Yony, días 6–7 |
-| Problema, objetivos, marco teórico y justificación | Capítulo I con fuentes y evidencia de entrevistas o limitación explícita | Daniel, día 7 |
+| Problema, objetivos, marco teórico y justificación | Capítulo I con fuentes, descripción del proceso y justificación; entrevistas solo si se obtuvieron | Daniel, día 7 |
 | Plan de implementación, cronograma y recursos | Capítulo III con este calendario, dependencias, herramientas y decisiones de alcance | Daniel, día 7 |
 | Evaluación descriptiva: funcionalidad, rendimiento, escalabilidad, satisfacción y costos | Tabla de pruebas ejecutadas, tiempos observados, límites de capacidad y prueba sencilla de carga, opinión de usuarios externos si se obtuvo y estimación cloud trazable; sin inventar satisfacción | Daniel con Yony, día 7 |
 | Estructura y formato del informe, anexos y referencias APA | PDF con portada completa, índice numerado, tres capítulos, referencias, anexos, tipografía y numeración exigidas | Daniel y revisión cruzada de Juan, día 8 |
