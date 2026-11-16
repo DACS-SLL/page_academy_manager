@@ -146,7 +146,7 @@ function renderTimeline() {
 function safeHref(value) {
   const href = String(value || '').trim();
   if (/^[a-z0-9_-]+\.md$/i.test(href)) return `#/documentos/${encodeURIComponent(href)}`;
-  if (/^assets\/[a-z0-9_-]+\.(png|svg)$/i.test(href)) return `./docs/${href}`;
+  if (/^assets\/[a-z0-9_-]+\.(png|svg|pdf)$/i.test(href)) return `./docs/${href}`;
   return /^(https?:\/\/|mailto:|#)/i.test(href) ? href : '';
 }
 marked.use({ renderer: {

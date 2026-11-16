@@ -11,6 +11,8 @@ Esta guía resume el [contrato funcional completo](CONTRATO_FUNCIONAL_MVP.md). L
 
 [Abrir la infografía PNG en resolución completa](assets/contrato_mvp_infografia.png) · **2667 × 4400 px** · orientación vertical para página de PDF.
 
+[Descargar resumen para compartir por WhatsApp (PDF, 2 páginas)](assets/contrato_mvp_revision_equipo.pdf).
+
 ## Reglas que la reunión debe preservar
 
 - **Matrícula:** secretaría registra alumno, apoderado, precio fijo para el ciclo, inscripción y mensualidades. Solo el pago bancario de la inscripción confirmado con voucher activa la matrícula.
