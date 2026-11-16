@@ -28,6 +28,6 @@ Conecta `https://github.com/DACS-SLL/page_academy_manager`. Vercel ejecuta `npm 
 
 ## Documentación y tareas
 
-Los Markdown compartidos viven en `docs/`. El build genera `docs/manifest.json` automáticamente. Para actualizar el plan, edita `docs/PLAN_FINAL.md` y abre PR. Las tareas iniciales viven en `data/tasks.json` y siguen los ID del plan.
+Los Markdown compartidos viven en `docs/`. El build genera `docs/manifest.json` automáticamente. `docs/CONTRATO_FUNCIONAL_MVP.md` fija el flujo confirmado por Daniel y `docs/PLAN_FINAL.md` organiza el trabajo de ocho días. Para actualizarlos, abre un PR. Las tareas iniciales viven en `data/tasks.json` y siguen los ID del plan. La validación comercial está en pausa.
 
 La web es solo frontend: los cambios del tablero no se comparten **hasta que `data/team-state.json` se integre por PR y Vercel vuelva a desplegar**. GitHub Issues y Pull Requests son el registro operativo compartido. No guardes información sensible en notas locales ni en el JSON exportado.

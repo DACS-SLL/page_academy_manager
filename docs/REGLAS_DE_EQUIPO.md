@@ -2,10 +2,10 @@
 
 ## Prioridad
 
-1. El recorrido del MVP debe funcionar en cloud con datos persistentes: matrícula → cuotas → pago parcial → asistencia → alerta → seguimiento.
-2. Los errores de saldo, autorización, aislamiento entre academias y persistencia son bloqueantes.
+1. El recorrido del MVP debe cumplir `CONTRATO_FUNCIONAL_MVP.md` en cloud con datos persistentes: matrícula activa o excepcional → pago bancario con voucher → asistencia → alerta → contacto y decisión.
+2. Los errores de voucher, cupo, saldo, autorización, aislamiento entre academias y persistencia son bloqueantes.
 3. Las mejoras P1 se empiezan solo cuando las tareas P0 y sus pruebas están estables.
-4. Informe, diapositivas y evidencia se redactan en paralelo al código.
+4. Informe, diapositivas y evidencia se redactan en paralelo al código. La validación comercial permanece en pausa hasta un nuevo acuerdo del equipo.
 
 ## Responsables
 
@@ -26,7 +26,8 @@ Una tarea P0 solo está terminada cuando funciona en la versión publicada, usa 
 
 ## Documentos
 
-- `PLAN_FINAL.md`: alcance, cronograma, backlog, criterios y validación comercial.
+- `PLAN_FINAL.md`: alcance, cronograma, backlog y criterios académicos.
+- `CONTRATO_FUNCIONAL_MVP.md`: flujo y reglas confirmados por Daniel; base para pantallas, datos y pruebas.
 - `GUIA_GIT_Y_VERCEL.md`: qué subir a cada repositorio y cómo abrir PR.
 - `REGLAS_DE_EQUIPO.md`: acuerdos de operación.
 

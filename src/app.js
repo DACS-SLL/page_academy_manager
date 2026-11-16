@@ -14,12 +14,12 @@ const people = [
   { key: 'Daniel', name: 'Daniel Casas', short: 'Daniel', initials: 'DC', role: 'Proyecto · QA y documentación', detail: 'Alcance, pruebas, informe y entrega.' },
 ];
 const days = [
-  { n: 1, date: '16 NOV', title: 'Alcance y contrato cerrados', detail: 'Flujo, roles, modelo y criterios aprobados por los cuatro.' },
-  { n: 2, date: '17 NOV', title: 'Base cloud y accesos', detail: 'Tres roles entran en la aplicación publicada.' },
-  { n: 3, date: '18 NOV', title: 'Matrícula persistente', detail: 'Alumno, grupo y tres cuotas sobreviven a una recarga.' },
-  { n: 4, date: '19 NOV', title: 'Operación diaria real', detail: 'Pago parcial cambia saldo; docente guarda asistencia.' },
-  { n: 5, date: '20 NOV', title: 'MVP completo en cloud', detail: 'Tablero y seguimiento funcionan de punta a punta.' },
-  { n: 6, date: '21 NOV', title: 'Pruebas y estabilización', detail: 'A01–A10, dos academias y permisos sin defectos críticos.' },
+  { n: 1, date: '16 NOV', title: 'Contrato funcional presentado', detail: 'Daniel presenta el flujo; el equipo registra viabilidad y contratos técnicos.' },
+  { n: 2, date: '17 NOV', title: 'Base cloud y accesos', detail: 'Tres roles entran; vouchers y datos quedan protegidos.' },
+  { n: 3, date: '18 NOV', title: 'Solicitud persistente', detail: 'Ciclo, cupo, alumno, inscripción y mensualidades sobreviven a una recarga.' },
+  { n: 4, date: '19 NOV', title: 'Operación diaria real', detail: 'Voucher activa matrícula; pago cambia saldo; docente toma lista y traslado respeta cupo.' },
+  { n: 5, date: '20 NOV', title: 'MVP completo en cloud', detail: 'Alertas de deuda/faltas, contactos y decisión funcionan de punta a punta.' },
+  { n: 6, date: '21 NOV', title: 'Pruebas y estabilización', detail: 'A01–A14, dos academias y permisos sin defectos críticos.' },
   { n: 7, date: '22 NOV', title: 'Congelamiento y ensayo', detail: 'Informe, ZIP y demo ensayados; solo bloqueantes.' },
   { n: 8, date: '23 NOV', title: 'Entrega con margen', detail: 'Cargar dos archivos antes de las 20:00; límite 23:00.' },
 ];
@@ -114,7 +114,7 @@ function renderKanbanColumns() {
   }).join('');
 }
 function renderBoard() {
-  view.innerHTML = `${pageHead('EJECUCIÓN', 'Tablero del sprint', 'Tareas del plan final, responsables y criterios de entrega.', `<button class="btn btn-light" id="import-state">Importar JSON</button><button class="btn btn-dark" id="export-state">Exportar estado ↗</button>`)}<div class="callout" style="margin-bottom:17px"><span>ⓘ</span><div><strong>Seguimiento personal sin base de datos</strong><p>Los cambios aquí se guardan solo en este navegador. Para el estado común del equipo, usen Issues y Pull Requests en GitHub o compartan el JSON exportado.</p></div></div><div class="toolbar"><label class="search-wrap"><input id="task-search" type="search" placeholder="Buscar tarea, ID o módulo..." value="${esc(ui.query)}" aria-label="Buscar tareas" /></label><select id="owner-filter" class="filter-select" aria-label="Filtrar por integrante"><option value="all">Todo el equipo</option>${people.map((p) => `<option value="${p.key}" ${ui.owner === p.key ? 'selected' : ''}>${esc(p.short)}</option>`).join('')}</select><select id="priority-filter" class="filter-select" aria-label="Filtrar por prioridad"><option value="all">Todas las prioridades</option><option value="P0" ${ui.priority === 'P0' ? 'selected' : ''}>Crítico · P0</option><option value="P1" ${ui.priority === 'P1' ? 'selected' : ''}>Mejora · P1</option><option value="Paralelo" ${ui.priority === 'Paralelo' ? 'selected' : ''}>Negocio · paralelo</option></select></div><div id="kanban" class="kanban"></div><input type="file" id="state-file" accept="application/json,.json" hidden />`;
+  view.innerHTML = `${pageHead('EJECUCIÓN', 'Tablero del sprint', 'Tareas del plan final, responsables y criterios de entrega.', `<button class="btn btn-light" id="import-state">Importar JSON</button><button class="btn btn-dark" id="export-state">Exportar estado ↗</button>`)}<div class="callout" style="margin-bottom:17px"><span>ⓘ</span><div><strong>Seguimiento personal sin base de datos</strong><p>Los cambios aquí se guardan solo en este navegador. Para el estado común del equipo, usen Issues y Pull Requests en GitHub o compartan el JSON exportado.</p></div></div><div class="toolbar"><label class="search-wrap"><input id="task-search" type="search" placeholder="Buscar tarea, ID o módulo..." value="${esc(ui.query)}" aria-label="Buscar tareas" /></label><select id="owner-filter" class="filter-select" aria-label="Filtrar por integrante"><option value="all">Todo el equipo</option>${people.map((p) => `<option value="${p.key}" ${ui.owner === p.key ? 'selected' : ''}>${esc(p.short)}</option>`).join('')}</select><select id="priority-filter" class="filter-select" aria-label="Filtrar por prioridad"><option value="all">Todas las prioridades</option><option value="P0" ${ui.priority === 'P0' ? 'selected' : ''}>Crítico · P0</option><option value="P1" ${ui.priority === 'P1' ? 'selected' : ''}>Mejora · P1</option></select></div><div id="kanban" class="kanban"></div><input type="file" id="state-file" accept="application/json,.json" hidden />`;
   const guidance = view.querySelector('.callout');
   guidance.querySelector('strong').textContent = 'Estado publicado + cambios locales';
   guidance.querySelector('p').textContent = 'Todos leen data/team-state.json del repositorio del panel. Para compartir tus cambios, exporta el JSON y abre un PR que reemplace ese archivo.';
@@ -150,7 +150,7 @@ function safeHref(value) {
 marked.use({ renderer: {
   html() { return ''; },
   image(token) { return `<span class="image-placeholder">[Imagen: ${esc(token.text || '')}]</span>`; },
-  link(token) { const href = safeHref(token.href); return href ? `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(token.text || href)}</a>` : esc(token.text || 'enlace'); },
+  link(token) { const href = safeHref(token.href); const external = /^https?:\/\//i.test(href); return href ? `<a href="${esc(href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(token.text || href)}</a>` : esc(token.text || 'enlace'); },
 } });
 
 function renderDocList() {
