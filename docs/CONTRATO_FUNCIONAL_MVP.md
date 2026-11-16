@@ -5,6 +5,8 @@
 **Estado:** base funcional validada por Daniel; Juan, Fernando y Yony revisarán viabilidad técnica, nombres de campos y reparto de implementación.  
 **Prioridad:** este contrato prevalece sobre ejemplos o reglas anteriores del plan cuando describan el comportamiento del MVP. No incluye validación comercial.
 
+Para presentarlo al equipo, usa la [guía visual con infografía, matriz y preguntas](00_GUIA_VISUAL_CONTRATO_MVP.md).
+
 ## 1. Objetivo demostrable
 
 Una academia organiza un ciclo, matricula alumnos en un grupo con cupos, registra pagos bancarios con voucher, toma asistencia por clase y da seguimiento a deudas y faltas. La demostración debe usar datos ficticios persistentes, reglas calculadas desde la base de datos y tres roles con acceso efectivo. Ningún indicador se simula con valores fijos en la interfaz.

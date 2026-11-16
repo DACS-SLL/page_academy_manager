@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1650" viewBox="0 0 1000 1650" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Contrato funcional del MVP de Academia Manager</title>
+  <desc id="descripcion">Infografía de seis pasos: configurar el ciclo, registrar matrícula, autorizar excepciones y traslados, tomar asistencia, detectar alertas y cerrar casos con evidencia.</desc>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c1725"/><stop offset="1" stop-color="#122a37"/></linearGradient>
+    <linearGradient id="brillo" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c9fa6b"/><stop offset="1" stop-color="#70e0df"/></linearGradient>
+    <filter id="sombra" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#03101a" flood-opacity="0.35"/></filter>
+    <marker id="flecha" markerWidth="12" markerHeight="12" refX="7" refY="6" orient="auto"><path d="M2 2 L8 6 L2 10" fill="none" stroke="#9fdfcf" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:'Segoe UI',Arial,sans-serif}
+      .kicker{fill:#a6c1c7;font-size:19px;font-weight:700;letter-spacing:3px}
+      .title{fill:#f4fbf8;font-size:55px;font-weight:800;letter-spacing:-2px}
+      .subtitle{fill:#b5cbd2;font-size:23px}
+      .pill{font-size:19px;font-weight:800;letter-spacing:.4px}
+      .num{font-size:31px;font-weight:800;fill:#172735;text-anchor:middle}
+      .step-title{fill:#f4fbf8;font-size:29px;font-weight:800;letter-spacing:-.5px}
+      .step-body{fill:#b9cbd1;font-size:20px}
+      .mini{fill:#91b7b9;font-size:17px;font-weight:700;letter-spacing:1.5px}
+      .footer{fill:#b6ccd1;font-size:19px}
+    </style>
+  </defs>
+  <rect width="1000" height="1650" fill="url(#fondo)"/>
+  <circle cx="1000" cy="0" r="320" fill="#2c675e" opacity=".14"/>
+  <circle cx="25" cy="1625" r="240" fill="#2f6470" opacity=".12"/>
+  <rect x="50" y="48" width="15" height="15" rx="3" fill="#c9fa6b" transform="rotate(-10 58 55)"/>
+  <rect x="72" y="48" width="15" height="15" rx="3" fill="#70e0df" transform="rotate(-10 80 55)"/>
+  <text x="106" y="63" class="kicker">ACADEMIA MANAGER  ·  SPRINT 16–23 NOV 2026</text>
+  <text x="50" y="133" class="title">Contrato funcional del MVP</text>
+  <text x="52" y="172" class="subtitle">Un recorrido verificable desde la matrícula hasta la decisión de dirección.</text>
+  <rect x="50" y="202" width="276" height="54" rx="16" fill="#223b3b" stroke="#588a70"/>
+  <circle cx="77" cy="229" r="8" fill="#c9fa6b"/>
+  <text x="98" y="236" class="pill" fill="#dff8ba">DIRECCIÓN</text>
+  <rect x="346" y="202" width="276" height="54" rx="16" fill="#1d3a45" stroke="#458b99"/>
+  <circle cx="373" cy="229" r="8" fill="#70e0df"/>
+  <text x="394" y="236" class="pill" fill="#c5f6f2">SECRETARÍA</text>
+  <rect x="642" y="202" width="308" height="54" rx="16" fill="#423928" stroke="#b88c5d"/>
+  <circle cx="669" cy="229" r="8" fill="#f3bf83"/>
+  <text x="690" y="236" class="pill" fill="#ffe1b3">DOCENTE</text>
+
+  <path d="M500 453 V479" fill="none" stroke="#8ac5b8" stroke-width="4" marker-end="url(#flecha)"/>
+  <path d="M500 658 V684" fill="none" stroke="#8ac5b8" stroke-width="4" marker-end="url(#flecha)"/>
+  <path d="M500 863 V889" fill="none" stroke="#8ac5b8" stroke-width="4" marker-end="url(#flecha)"/>
+  <path d="M500 1068 V1094" fill="none" stroke="#8ac5b8" stroke-width="4" marker-end="url(#flecha)"/>
+  <path d="M500 1273 V1299" fill="none" stroke="#8ac5b8" stroke-width="4" marker-end="url(#flecha)"/>
+
+  <rect x="50" y="283" width="900" height="170" rx="25" fill="#1a3040" stroke="#375468" filter="url(#sombra)"/>
+  <rect x="50" y="283" width="8" height="170" rx="4" fill="#c9fa6b"/>
+  <circle cx="102" cy="365" r="33" fill="#c9fa6b"/><text x="102" y="376" class="num">01</text>
+  <text x="161" y="332" class="mini">DIRECCIÓN  ·  CONFIGURACIÓN</text>
+  <text x="161" y="378" class="step-title">Ciclo, grupos y capacidad</text>
+  <text x="161" y="412" class="step-body">3 meses · 5.º de secundaria · turno mañana · grupo B</text>
+  <text x="161" y="438" class="step-body">Cursos, docentes y reglas de aviso 10 / revisión 15.</text>
+
+  <rect x="50" y="488" width="900" height="170" rx="25" fill="#1a3040" stroke="#375468" filter="url(#sombra)"/>
+  <rect x="50" y="488" width="8" height="170" rx="4" fill="#70e0df"/>
+  <circle cx="102" cy="570" r="33" fill="#70e0df"/><text x="102" y="581" class="num">02</text>
+  <text x="161" y="537" class="mini">SECRETARÍA  ·  MATRÍCULA</text>
+  <text x="161" y="583" class="step-title">Alumno, apoderado y precio fijo</text>
+  <text x="161" y="617" class="step-body">Inscripción + mensualidades separadas; sin efectivo.</text>
+  <text x="161" y="643" class="step-body">Voucher bancario verificado activa la matrícula.</text>
+
+  <rect x="50" y="693" width="900" height="170" rx="25" fill="#1a3040" stroke="#375468" filter="url(#sombra)"/>
+  <rect x="50" y="693" width="8" height="170" rx="4" fill="#c9fa6b"/>
+  <circle cx="102" cy="775" r="33" fill="#c9fa6b"/><text x="102" y="786" class="num">03</text>
+  <text x="161" y="742" class="mini">DIRECCIÓN  ·  EXCEPCIONES</text>
+  <text x="161" y="788" class="step-title">Autorizar sin perder el control</text>
+  <text x="161" y="822" class="step-body">Excepción: motivo + fecha; el alumno ocupa cupo.</text>
+  <text x="161" y="848" class="step-body">Traslado: solo con vacante e historial conservado.</text>
+
+  <rect x="50" y="898" width="900" height="170" rx="25" fill="#1a3040" stroke="#375468" filter="url(#sombra)"/>
+  <rect x="50" y="898" width="8" height="170" rx="4" fill="#f3bf83"/>
+  <circle cx="102" cy="980" r="33" fill="#f3bf83"/><text x="102" y="991" class="num">04</text>
+  <text x="161" y="947" class="mini">DOCENTE  ·  CADA CLASE</text>
+  <text x="161" y="993" class="step-title">Crear sesión y pasar lista</text>
+  <text x="161" y="1027" class="step-body">Grupo + curso + fecha/hora; presente, ausente o tarde.</text>
+  <text x="161" y="1053" class="step-body">La tardanza suma falta solo si el ciclo así lo define.</text>
+
+  <rect x="50" y="1103" width="900" height="170" rx="25" fill="#1a3040" stroke="#375468" filter="url(#sombra)"/>
+  <rect x="50" y="1103" width="8" height="170" rx="4" fill="url(#brillo)"/>
+  <circle cx="102" cy="1185" r="33" fill="#c9fa6b"/><text x="102" y="1196" class="num">05</text>
+  <text x="161" y="1152" class="mini">SECRETARÍA + DIRECCIÓN  ·  ALERTAS</text>
+  <text x="161" y="1198" class="step-title">Detectar antes de perder el caso</text>
+  <text x="161" y="1232" class="step-body">Deuda vencida o 10 faltas → contacto y acuerdo.</text>
+  <text x="161" y="1258" class="step-body">Al límite de 15, dirección decide; no es automático.</text>
+
+  <rect x="50" y="1308" width="900" height="170" rx="25" fill="#1a3040" stroke="#375468" filter="url(#sombra)"/>
+  <rect x="50" y="1308" width="8" height="170" rx="4" fill="#70e0df"/>
+  <circle cx="102" cy="1390" r="33" fill="#70e0df"/><text x="102" y="1401" class="num">06</text>
+  <text x="161" y="1357" class="mini">SISTEMA + EQUIPO  ·  EVIDENCIA</text>
+  <text x="161" y="1403" class="step-title">Cerrar por resolución, conservar historial</text>
+  <text x="161" y="1437" class="step-body">Deuda: saldo cero. Faltas: fin de ciclo o decisión.</text>
+  <text x="161" y="1463" class="step-body">Pagos, vouchers y contactos quedan trazables.</text>
+
+  <line x1="50" y1="1520" x2="950" y2="1520" stroke="#385763" stroke-width="2"/>
+  <text x="50" y="1560" class="footer">P0: datos persistentes · tres roles · vouchers privados · cupos seguros</text>
+  <text x="50" y="1591" class="footer">P1: CSV y filtros. En pausa: validación comercial.</text>
+  <text x="50" y="1630" class="mini">BASE FUNCIONAL CONFIRMADA POR DANIEL · REVISIÓN TÉCNICA DEL EQUIPO PENDIENTE</text>
+</svg>

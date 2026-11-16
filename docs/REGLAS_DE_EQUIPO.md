@@ -28,6 +28,7 @@ Una tarea P0 solo está terminada cuando funciona en la versión publicada, usa 
 
 - `PLAN_FINAL.md`: alcance, cronograma, backlog y criterios académicos.
 - `CONTRATO_FUNCIONAL_MVP.md`: flujo y reglas confirmados por Daniel; base para pantallas, datos y pruebas.
+- `00_GUIA_VISUAL_CONTRATO_MVP.md`: infografía PNG para el PDF, matriz de evidencia y preguntas de revisión del equipo.
 - `GUIA_GIT_Y_VERCEL.md`: qué subir a cada repositorio y cómo abrir PR.
 - `REGLAS_DE_EQUIPO.md`: acuerdos de operación.
 
