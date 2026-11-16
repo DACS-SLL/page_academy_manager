@@ -73,6 +73,33 @@ Cada consulta y escritura se restringe por academia también en la base de datos
 
 **Evidencia requerida:** URL, capturas de cada rol, resultado de cada prueba, registro de errores y correcciones, migraciones, datos ficticios reproducibles y explicación de servicios cloud en el informe.
 
-## 9. Decisiones de implementación pendientes del equipo técnico
+## 9. Matriz requisito–prueba–evidencia
 
-Fernando define el esquema, transacciones, políticas por fila y almacenamiento privado que cumplan estas reglas. Juan define pantallas y estados de carga/error. Yony integra y despliega. Daniel revisa el recorrido y los casos de prueba. Ningún ajuste técnico debe cambiar los resultados funcionales anteriores sin registrar la decisión con Daniel. La confirmación de viabilidad técnica por el equipo es la siguiente puerta de salida de `R01`.
+Esta matriz define **qué habrá que comprobar**; ninguna prueba figura como ejecutada todavía. Los casos `A01`–`A14` están descritos en la sección 8 del plan final. Daniel añadirá resultado, fecha y enlace de captura o registro al ejecutar cada caso.
+
+| Requisito funcional o de seguridad | Casos | Evidencia esperada | Revisor |
+|---|---|---|---|
+| Ciclo, grupo, cupo, curso y docente persisten | `A01`, `A14` | Pantallas después de recargar y registros de base de datos | Juan y Daniel |
+| Inscripción confirmada activa; solicitud sin pago no ocupa cupo | `A02` | Estados antes/después y cupos disponibles | Fernando y Daniel |
+| Excepción de dirección guarda motivo/fecha, ocupa cupo y permite asistir vencida | `A03` | Autorización, lista del docente y deuda visible para secretaría | Fernando y Daniel |
+| Traslado exige autorización y cupo, y conserva historial | `A04` | Traslado válido, rechazo por grupo lleno e historial anterior | Yony y Daniel |
+| Todo pago es bancario, exige voucher privado y actualiza saldo correctamente | `A05`, `A06` | Pago parcial, imagen accesible a rol permitido y rechazos sin cambio de saldo | Fernando y Daniel |
+| Anulación solo por dirección y con motivo | `A07` | Saldo restaurado, auditoría y rechazo para secretaría | Fernando y Daniel |
+| Docente registra una sesión de su grupo/curso sin duplicados | `A08`, `A10` | Sesión y asistencias guardadas; rechazo de duplicado y grupo ajeno | Yony y Daniel |
+| Faltas acumuladas y tardanzas siguen la regla configurable del ciclo | `A08`, `A09` | Conteo al llegar a 10/15, cambio de regla y alerta sin desaprobación automática | Fernando y Daniel |
+| Secretaría conserva contactos; deuda y faltas cierran según su causa | `A13` | Historial de llamada/acuerdo, saldo pagado y cierre del caso al finalizar ciclo | Juan y Daniel |
+| Docente y academia ajena no acceden a finanzas, apoderados ni vouchers | `A11`, `A12` | Solicitudes API/Storage denegadas y capturas de cada rol | Fernando y Daniel |
+| Aplicación funciona publicada con HTTPS y datos persistentes | `A14` | URL pública, recorrido desde segundo navegador y despliegue registrado | Yony y Daniel |
+
+## 10. Revisión técnica pendiente para cerrar `R01`
+
+El flujo funcional quedó definido con Daniel. **La presentación al equipo y su revisión técnica siguen pendientes.** En la reunión, registrar en un PR o acta breve:
+
+| Responsable | Confirmación necesaria | Estado |
+|---|---|---|
+| Juan | Pantallas mínimas y estados de carga/error para los tres roles; orden del recorrido de demo. | Pendiente |
+| Fernando | Esquema, transacciones de pago/cupo, políticas por academia y rol, vouchers privados y consultas de alertas. | Pendiente |
+| Yony | Integración, carga privada de imágenes, seed de 9/14 faltas, despliegue cloud y secuencia de entregas. | Pendiente |
+| Daniel | Resolver observaciones que afecten alcance y aprobar la matriz final de requisitos y pruebas. | Pendiente |
+
+Ningún ajuste técnico debe cambiar los resultados funcionales acordados sin registrar la decisión con Daniel. Tras resolver observaciones y dejar responsables/contratos claros, Daniel puede marcar `R01` como completada; el software y las pruebas seguirán pendientes en sus tareas correspondientes.
