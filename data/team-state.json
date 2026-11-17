@@ -1,6 +1,10 @@
 {
   "format": "academia-manager-state-v1",
-  "updatedAt": "2026-11-15T00:00:00-05:00",
-  "statuses": {},
-  "notes": {}
+  "updatedAt": "2026-11-17T10:35:29-05:00",
+  "statuses": {
+    "R01": "done"
+  },
+  "notes": {
+    "R01": "Daniel cerró el alcance funcional el 17/11 con respuestas de Fernando y Yony. Juan no respondió: pantallas y estados pasan a F01-F03. Claims/RPC/Storage y cloud se precisan en B01/C01. Pruebas aún pendientes. Ver ACTA_CIERRE_R01.md."
+  }
 }

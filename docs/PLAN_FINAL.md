@@ -2,6 +2,8 @@
 
 > **Archivo canónico de ejecución.** Este plan fija responsables y calendario. El [contrato funcional del MVP](#/documentos/CONTRATO_FUNCIONAL_MVP.md) fija el comportamiento acordado con Daniel y prevalece si un ejemplo de este plan quedara desactualizado. El equipo técnico debe revisar su viabilidad antes de integrar código. Ninguno de los dos documentos afirma que el software o el negocio ya estén validados.
 
+**Actualización del 17 de noviembre:** Daniel cerró `R01` tras analizar las respuestas de Fernando y Yony. Juan no respondió; sus decisiones de interfaz pasan a `F01`-`F03`. Los contratos técnicos y bloqueos de cloud continúan en `B01` y `C01`. Ver [acta de cierre](#/documentos/ACTA_CIERRE_R01.md).
+
 **Periodo:** 16 al 23 de noviembre de 2026, hora de Lima  
 **Entrega oficial:** 23 de noviembre, 23:00  
 **Meta interna de carga:** 23 de noviembre, antes de las 20:00  

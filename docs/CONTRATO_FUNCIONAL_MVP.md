@@ -2,7 +2,7 @@
 
 **Versión:** 1.0, 16 de noviembre de 2026.  
 **Origen:** flujo descrito y decisiones confirmadas por Daniel Casas a partir de su experiencia en academias.  
-**Estado:** base funcional validada por Daniel; Juan, Fernando y Yony revisarán viabilidad técnica, nombres de campos y reparto de implementación.  
+**Estado:** contrato funcional cerrado por Daniel el 17 de noviembre. Fernando y Yony respondieron; Juan aún debe acordar las pantallas en `F01`-`F03`. Ver [acta R01](ACTA_CIERRE_R01.md).
 **Prioridad:** este contrato prevalece sobre ejemplos o reglas anteriores del plan cuando describan el comportamiento del MVP. No incluye validación comercial.
 
 Para presentarlo al equipo, usa la [guía visual con infografía, matriz y preguntas](00_GUIA_VISUAL_CONTRATO_MVP.md).
@@ -93,15 +93,15 @@ Esta matriz define **qué habrá que comprobar**; ninguna prueba figura como eje
 | Docente y academia ajena no acceden a finanzas, apoderados ni vouchers | `A11`, `A12` | Solicitudes API/Storage denegadas y capturas de cada rol | Fernando y Daniel |
 | Aplicación funciona publicada con HTTPS y datos persistentes | `A14` | URL pública, recorrido desde segundo navegador y despliegue registrado | Yony y Daniel |
 
-## 10. Revisión técnica pendiente para cerrar `R01`
+## 10. Cierre de `R01` y trabajo trasladado
 
-El flujo funcional quedó definido con Daniel. **La presentación al equipo y su revisión técnica siguen pendientes.** En la reunión, registrar en un PR o acta breve:
+Daniel cerró `R01` el **17 de noviembre de 2026** con el flujo de esta versión y las respuestas de Fernando y Yony, documentadas en el [acta de cierre](ACTA_CIERRE_R01.md). El cierre permite iniciar implementación; no equivale a pruebas ejecutadas ni a validación comercial.
 
 | Responsable | Confirmación necesaria | Estado |
 |---|---|---|
-| Juan | Pantallas mínimas y estados de carga/error para los tres roles; orden del recorrido de demo. | Pendiente |
-| Fernando | Esquema, transacciones de pago/cupo, políticas por academia y rol, vouchers privados y consultas de alertas. | Pendiente |
-| Yony | Integración, carga privada de imágenes, seed de 9/14 faltas, despliegue cloud y secuencia de entregas. | Pendiente |
-| Daniel | Resolver observaciones que afecten alcance y aprobar la matriz final de requisitos y pruebas. | Pendiente |
+| Juan | Pantallas mínimas y estados de carga/error para los tres roles; orden del recorrido de demo. | Pendiente en `F01`-`F03`; no respondió a `R01`. |
+| Fernando | Esquema, transacciones de pago/cupo, políticas por academia y rol, vouchers privados. | Decisiones recibidas; implementación y pruebas pendientes en `B01`-`B03`. |
+| Yony | Integración, datos ficticios, despliegue cloud y pruebas entre navegadores. | Decisiones recibidas; configuración y contratos pendientes en `C01` e `I01`. |
+| Daniel | Aprobar el alcance y conservar la matriz de requisitos y pruebas. | `R01` cerrado; evidencia de ejecución pendiente en `Q01`. |
 
-Ningún ajuste técnico debe cambiar los resultados funcionales acordados sin registrar la decisión con Daniel. Tras resolver observaciones y dejar responsables/contratos claros, Daniel puede marcar `R01` como completada; el software y las pruebas seguirán pendientes en sus tareas correspondientes.
+Ningún ajuste técnico debe cambiar los resultados funcionales acordados sin registrar la decisión con Daniel. Las precisiones sobre claims, RPC, cupos, pagos y Storage del acta se verifican al implementar `B01`-`B03`.

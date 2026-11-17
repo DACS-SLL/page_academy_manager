@@ -3,7 +3,7 @@
 **Reunión:** cierre de `R01` · 16 de noviembre de 2026  
 **Presenta:** Daniel Casas  
 **Revisan:** Juan Alexis Quispe Luque, Fernando Perez del Castillo y Yony Alex Vilca Mamani  
-**Estado:** propuesta funcional confirmada por Daniel; revisión técnica del equipo pendiente.
+**Estado:** material de revisión del 16 de noviembre; `R01` se cerró el 17 con las respuestas de Fernando y Yony. Ver [acta de cierre](ACTA_CIERRE_R01.md).
 
 Esta guía resume el [contrato funcional completo](CONTRATO_FUNCIONAL_MVP.md). La imagen está lista para insertarse en el PDF del informe o en las diapositivas. Se debe presentar como **flujo acordado para construir**, no como software ya implementado ni como validación comercial.
 
@@ -11,7 +11,7 @@ Esta guía resume el [contrato funcional completo](CONTRATO_FUNCIONAL_MVP.md). L
 
 [Abrir la infografía PNG en resolución completa](assets/contrato_mvp_infografia.png) · **2667 × 4400 px** · orientación vertical para página de PDF.
 
-[Descargar resumen para compartir por WhatsApp (PDF, 2 páginas)](assets/contrato_mvp_revision_equipo.pdf).
+[Descargar resumen usado para la revisión (PDF, 2 páginas)](assets/contrato_mvp_revision_equipo.pdf). El PDF conserva el estado previo al cierre; las decisiones posteriores están en el acta.
 
 ## Reglas que la reunión debe preservar
 
