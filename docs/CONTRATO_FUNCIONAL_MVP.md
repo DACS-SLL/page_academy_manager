@@ -2,7 +2,7 @@
 
 **Versión:** 1.0, 16 de noviembre de 2026.  
 **Origen:** flujo descrito y decisiones confirmadas por Daniel Casas a partir de su experiencia en academias.  
-**Estado:** contrato funcional cerrado por Daniel el 17 de noviembre. Fernando y Yony respondieron; Juan aún debe acordar las pantallas en `F01`-`F03`. Ver [acta R01](ACTA_CIERRE_R01.md).
+**Estado:** contrato funcional cerrado por Daniel el 17 de noviembre. Fernando y Yony respondieron; Juan debe completar `F00` antes de integrar `F01`-`F03`. Ver [acta R01](ACTA_CIERRE_R01.md).
 **Prioridad:** este contrato prevalece sobre ejemplos o reglas anteriores del plan cuando describan el comportamiento del MVP. No incluye validación comercial.
 
 Para presentarlo al equipo, usa la [guía visual con infografía, matriz y preguntas](00_GUIA_VISUAL_CONTRATO_MVP.md).
@@ -99,7 +99,7 @@ Daniel cerró `R01` el **17 de noviembre de 2026** con el flujo de esta versión
 
 | Responsable | Confirmación necesaria | Estado |
 |---|---|---|
-| Juan | Pantallas mínimas y estados de carga/error para los tres roles; orden del recorrido de demo. | Pendiente en `F01`-`F03`; no respondió a `R01`. |
+| Juan | Pantallas mínimas y estados de carga/error para los tres roles; orden del recorrido de demo. | Pendiente en `F00`; no respondió a `R01`. |
 | Fernando | Esquema, transacciones de pago/cupo, políticas por academia y rol, vouchers privados. | Decisiones recibidas; implementación y pruebas pendientes en `B01`-`B03`. |
 | Yony | Integración, datos ficticios, despliegue cloud y pruebas entre navegadores. | Decisiones recibidas; configuración y contratos pendientes en `C01` e `I01`. |
 | Daniel | Aprobar el alcance y conservar la matriz de requisitos y pruebas. | `R01` cerrado; evidencia de ejecución pendiente en `Q01`. |

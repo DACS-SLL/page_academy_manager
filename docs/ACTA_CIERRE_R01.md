@@ -2,7 +2,7 @@
 
 **Fecha:** 17 de noviembre de 2026.  
 **Decisión:** Daniel cierra `R01` como definición funcional y autoriza avanzar con el MVP.  
-**Base:** respuestas técnicas de Fernando y Yony; Juan aún no respondió. Sus decisiones de interfaz pasan a `F01`, `F02` y `F03` y deben revisarse antes de integrar esas pantallas.  
+**Base:** respuestas técnicas de Fernando y Yony; Juan aún no respondió. Sus decisiones de interfaz pasan a `F00` antes de integrar `F01`, `F02` y `F03`.
 **Alcance del cierre:** reglas de negocio, recorrido de demostración, responsables técnicos y pruebas previstas. No acredita código implementado, servicios cloud configurados, pruebas aprobadas ni validación comercial.
 
 ## Decisiones registradas
@@ -12,7 +12,7 @@
 | Daniel | Se mantiene el [contrato funcional](CONTRATO_FUNCIONAL_MVP.md): matrícula con inscripción confirmada o excepción, cupos y traslado autorizados, pagos bancarios con voucher, asistencia por sesión, alertas y seguimiento. | Supervisar `RF01`-`RF12` y ejecutar `Q01`. |
 | Yony | React + TypeScript, Supabase Auth/PostgreSQL/Storage privado y Cloudflare Pages para el SaaS. Preparará dos academias ficticias, los tres roles, datos reproducibles y la comprobación HTTPS entre navegadores. | `C01`, `B04`, `B06`, `I01`; pruebas `A11`, `A12`, `A14` junto a Daniel y Fernando. |
 | Fernando | Migraciones en `supabase/migrations/`; RPC transaccionales para cupos y pagos; restricciones en BD, RLS por academia y rol, bucket privado. | `B01`, `B02`, `B03`, `B05`; pruebas `A02`, `A04`-`A06`, `A11`, `A12`. |
-| Juan | Respuesta técnica pendiente. Daniel puede explicar el recorrido; Juan definirá pantallas, estados y mensajes de error al ejecutar sus tareas. | `F01`, `F02`, `F03`; revisión de `RF01` y `RF10`. |
+| Juan | Respuesta técnica pendiente. Daniel puede explicar el recorrido; Juan definirá pantallas, estados y mensajes de error antes de conectar módulos. | `F00`, luego `F01`-`F03`; revisión de `RF01` y `RF10`. |
 
 La web de coordinación sigue en el repositorio `page_academy_manager` y se despliega en Vercel. Cloudflare Pages corresponde a la **aplicación SaaS** del repositorio `cloud_project_academy`.
 
@@ -40,5 +40,5 @@ Los nombres definitivos de tablas y RPC se fijan en las migraciones. El comporta
 ## Siguientes comprobaciones
 
 - **Fernando y Yony:** publicar esquema inicial, políticas, firmas de operaciones y `.env.example` sin secretos en el repositorio del SaaS. Los bloqueos informados por Yony pasan a `B01` y `C01`; no se consideran resueltos por esta acta.
-- **Juan:** acordar con ellos el orden de pantallas y los estados de solicitud pendiente, matrícula activa, excepción vencida, pago rechazado, grupo lleno y alerta. Su falta de respuesta no bloquea `R01`, pero sí la aceptación de `F01`-`F03`.
+- **Juan:** completar `F00` con el orden de pantallas y los estados de solicitud pendiente, matrícula activa, excepción vencida, pago rechazado, grupo lleno y alerta. Su falta de respuesta no bloquea `R01`, pero sí la integración de `F01`-`F03`.
 - **Daniel:** ejecutar y guardar evidencia de `A02`, `A04`-`A06`, `A11`, `A12` y `A14` cuando exista software. Ninguna prueba se marca aprobada en esta acta.
