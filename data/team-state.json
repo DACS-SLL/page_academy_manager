@@ -1,16 +1,16 @@
 {
   "format": "academia-manager-state-v1",
-  "updatedAt": "2026-11-18T20:29:38-05:00",
+  "updatedAt": "2026-11-19T17:00:00-05:00",
   "statuses": {
     "R01": "done",
-    "C01": "blocked",
+    "C01": "doing",
     "F00": "todo",
-    "B01": "todo"
+    "B01": "doing"
   },
   "notes": {
     "R01": "Daniel cerró el alcance funcional el 17/11 con respuestas de Fernando y Yony. Juan no respondió: pantallas y estados pasan a F00 y luego F01-F03. Claims/RPC/Storage y cloud se precisan en B01/C01. Pruebas aún pendientes. Ver ACTA_CIERRE_R01.md.",
-    "C01": "18/11: Yony publicó feature/C01-base-react-cloudflare (0b71d96). Cloudflare Workers and Pages quedó instalado en DACS-SLL solo para cloud_project_academy; GitHub DACS-SLL ya está conectado a la cuenta Cloudflare y el repositorio es visible. Formulario Pages preparado con npm run build y dist. Falta integrar la rama de Yony en main (Cloudflare solo ofrece main), desplegar y verificar URL HTTPS. La base no prueba Auth ni RLS.",
-    "F00": "Pendiente del 17/11. La respuesta de interfaz de Juan no llegó durante R01; debe documentar pantallas, estados y errores antes de integrar F01-F03.",
-    "B01": "Pendiente del 17/11. Fernando entregó el enfoque técnico; en main del SaaS aún no constan migraciones, políticas, firmas de operaciones ni evidencia A11/A12."
+    "C01": "19/11: PR #1 fusionado en main (decdb78). Base React + TypeScript publicada por HTTPS en https://cloud-project-academy.pages.dev/ con build npm run build y salida dist; Cloudflare muestra despliegues automáticos. Estado: publicado, en verificación final. Falta comprobar en un segundo navegador según doneWhen. Supabase sigue sin configurar en la web; la persistencia completa corresponde a I01/A14.",
+    "F00": "19/11: no se encontró PR, documento ni wireframes publicados de Juan para F00. Puede existir trabajo local no compartido. Se necesitan mapa de pantallas, estados de carga/error y recorrido de demo antes de integrar F01-F03.",
+    "B01": "19/11: PR #2 de Fernando abierto en 5fba4ae. Migraciones, RLS, Storage privado y pruebas cloud 36/36 documentadas por Fernando; Daniel no las repitió. La revisión confirmó corrección de traslado directo y edición de cargos. Falta impedir INSERT directo de students con group_id y DELETE directo de alumnos, y probar ambos rechazos. No fusionar hasta revisar la nueva corrección."
   }
 }
