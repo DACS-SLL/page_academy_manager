@@ -1,16 +1,42 @@
 {
   "format": "academia-manager-state-v1",
-  "updatedAt": "2026-11-18T20:29:38-05:00",
+  "updatedAt": "2026-11-20T23:26:00-05:00",
   "statuses": {
     "R01": "done",
-    "C01": "blocked",
-    "F00": "todo",
-    "B01": "todo"
+    "C01": "done",
+    "F00": "doing",
+    "B01": "done",
+    "B02": "done",
+    "F01": "doing",
+    "B03": "done",
+    "B04": "doing",
+    "B06": "todo",
+    "F02": "todo",
+    "B05": "todo",
+    "F03": "todo",
+    "I01": "todo",
+    "Q01": "doing",
+    "D01": "doing",
+    "E01": "todo",
+    "F04": "todo"
   },
   "notes": {
-    "R01": "Daniel cerró el alcance funcional el 17/11 con respuestas de Fernando y Yony. Juan no respondió: pantallas y estados pasan a F00 y luego F01-F03. Claims/RPC/Storage y cloud se precisan en B01/C01. Pruebas aún pendientes. Ver ACTA_CIERRE_R01.md.",
-    "C01": "18/11: Yony publicó feature/C01-base-react-cloudflare (0b71d96). Cloudflare Workers and Pages quedó instalado en DACS-SLL solo para cloud_project_academy; GitHub DACS-SLL ya está conectado a la cuenta Cloudflare y el repositorio es visible. Formulario Pages preparado con npm run build y dist. Falta integrar la rama de Yony en main (Cloudflare solo ofrece main), desplegar y verificar URL HTTPS. La base no prueba Auth ni RLS.",
-    "F00": "Pendiente del 17/11. La respuesta de interfaz de Juan no llegó durante R01; debe documentar pantallas, estados y errores antes de integrar F01-F03.",
-    "B01": "Pendiente del 17/11. Fernando entregó el enfoque técnico; en main del SaaS aún no constan migraciones, políticas, firmas de operaciones ni evidencia A11/A12."
+    "R01": "Contrato funcional y acta cerrados con decisiones de Daniel, Fernando y Yony. La validación comercial permanece en pausa.",
+    "C01": "PR #1 del SaaS fusionado. Base React + TypeScript publicada en Cloudflare Pages por HTTPS; la prueba entre navegadores y la persistencia completa corresponden a I01/A14.",
+    "F00": "Juan entregó F00V2 para revisión y comunicó que avanza F01. Al corte no hay PR ni documento F00 publicado en el repositorio del SaaS; falta compartir mapa de pantallas, estados y enlace de evidencia.",
+    "B01": "PR #2 fusionado: Auth, roles, RLS por academia y Storage privado. Las pruebas de módulo documentadas por Fernando son evidencia parcial; A11/A12 se repetirán en Q01 con todos los flujos conectados.",
+    "B02": "PR #3 fusionado: ciclos, cupos, solicitudes, matrículas, cargos y traslado base. Las pruebas de módulo y contratos están publicados; A01/A02/A04 siguen pendientes de recorrido integrado.",
+    "F01": "Juan comunicó avance en las pantallas de ciclo y matrícula; todavía no hay PR publicado para verificar formularios conectados, persistencia ni permisos por rol.",
+    "B03": "PR #4 aprobado y fusionado en main (8806744): pagos bancarios, voucher privado, saldo, activación y anulación auditada. Fernando documentó B03 27/27, SQL, lint y build; Daniel no repitió las pruebas cloud. El descarte inmediato de vouchers está deshabilitado; la limpieza administrativa de huérfanos queda posterior.",
+    "B04": "Yony publicó la rama feature/B04-sesiones-asistencia con dos RPC, pruebas SQL y contrato, pero no abrió PR. Daniel pidió actualizarla con main, probar el traslado real y evitar sesiones duplicadas; A08/A10 continúan pendientes.",
+    "B06": "Faltan RPC de excepción autorizada y traslado con historial, pruebas de cupo y PR. Yony coordina con Fernando.",
+    "F02": "Pendiente de B04 y de las pantallas de Juan; B03 ya ofrece contrato de pagos para conectar voucher, saldo y anulación.",
+    "B05": "Pendiente: deuda, alertas de faltas, seguimiento y decisión de dirección. Depende de B04 y B06; Fernando puede preparar el contrato y las consultas.",
+    "F03": "Pendiente de B05/B06 y de la interfaz de Juan; debe mostrar casos reales, contactos y decisión.",
+    "I01": "Pendiente de flujos conectados F01–F03, dos academias demo, tres roles, seed 9/14 faltas y verificación HTTPS entre navegadores.",
+    "Q01": "Daniel preparó la matriz A01–A14, sin casos aprobados. Ejecutará pruebas de punta a punta cuando I01 conecte los flujos.",
+    "D01": "Daniel preparó un borrador de informe. Faltan resultados medidos, fuentes, capturas, diagramas, PDF, diapositivas y ZIP final.",
+    "E01": "Pendiente de ensayo, revisión de archivos y entrega el 23/11; objetivo interno antes de las 20:00.",
+    "F04": "Mejora P1 aplazada hasta que el recorrido P0 pase las pruebas."
   }
 }
